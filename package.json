@@ -37,7 +37,7 @@
     "eslint-plugin-jest": "26.3.0",
     "husky": "7.0.4",
     "jest": "28.1.0",
-    "lint-staged": "12.4.1",
+    "lint-staged": "12.4.2",
     "microbundle": "0.15.0",
     "prettier": "2.6.2",
     "sort-package-json": "1.57.0",
