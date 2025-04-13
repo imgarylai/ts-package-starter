@@ -3,7 +3,6 @@
 A modern, well-configured starter template for creating TypeScript npm packages. This template provides a solid foundation with best practices and essential tooling for TypeScript package development.
 
 [![CI](https://github.com/imgarylai/ts-package-starter/actions/workflows/test.yml/badge.svg)](https://github.com/imgarylai/ts-package-starter/actions/workflows/test.yml)
-[![npm version](https://badge.fury.io/js/@imgarylai%2Fts-package-starter.svg)](https://badge.fury.io/js/@imgarylai%2Fts-package-starter)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Features
@@ -22,51 +21,44 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 - 🌲 Tree-shakeable exports
 - 📦 Optimized npm package exports
 
-## Prerequisites
+## Getting Started
 
-### Required
-
-- Node.js >= 18.0.0 (LTS recommended)
-- npm >= 8.0.0
-
-> **Note**: These version requirements are strictly enforced. The package will not install if your Node.js or npm versions don't meet these requirements.
-
-### Recommended
-
-- Git >= 2.13.0
-- An IDE with TypeScript support (VS Code, WebStorm, etc.)
-
-### Why These Versions?
-
-#### Node.js 18+
-
-- Long Term Support (LTS) status
-- Modern JavaScript features support
-- Built-in fetch API
-- Enhanced security features
-- Better performance
-
-#### npm 8+
-
-- Improved dependency resolution
-- Enhanced security features
-- Workspace support
-- Better peer dependency handling
-
-## Installation
+1. Use this template by clicking the "Use this template" button on GitHub
+   or clone it directly:
 
 ```bash
-npm install @imgarylai/ts-package-starter
+git clone https://github.com/imgarylai/ts-package-starter.git my-package
+cd my-package
 ```
 
-## Usage
+2. Update the package information:
+
+   - Modify `package.json` with your package name, description, author, etc.
+   - Update this README.md with your package's information
+   - Update the LICENSE file if needed
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Start developing:
+
+```bash
+npm run dev
+```
+
+## Example Usage
+
+This is an example of how your package could be used once you publish it. Update this section with your own package's usage:
 
 ```typescript
-import { HelloWorld } from '@imgarylai/ts-package-starter';
+// This is just a placeholder example - replace with your own package's usage
+import { YourFunction } from 'your-package-name';
 
-// Use the package
-const result = HelloWorld();
-console.log(result); // "Hello World!"
+// Use your package
+const result = YourFunction();
 ```
 
 ## Development
