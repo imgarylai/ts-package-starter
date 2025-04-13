@@ -122,9 +122,69 @@ npm run dev
 
 ## Publishing
 
-1. Update the version in `package.json`
-2. Build the package: `npm run build`
-3. Publish to npm: `npm publish`
+This package uses semantic-release for automated publishing based on conventional commit messages. The process is fully automated and will:
+
+- Determine the next version number based on commit messages
+- Generate release notes
+- Update the CHANGELOG.md
+- Create a GitHub release
+- Publish to npm
+
+### How it Works
+
+The release process is triggered by commits to the main branch. The version bump is determined by your commit messages:
+
+- `fix: ...` - Patch release (1.0.0 → 1.0.1)
+- `feat: ...` - Minor release (1.0.0 → 1.1.0)
+- `BREAKING CHANGE: ...` in commit body - Major release (1.0.0 → 2.0.0)
+- `feat!: ...` - Major release with breaking change (1.0.0 → 2.0.0)
+
+Examples:
+
+```bash
+# Patch release
+git commit -m "fix: correct network timeout issue"
+
+# Minor release
+git commit -m "feat: add new API endpoint"
+
+# Major release
+git commit -m "feat!: redesign public API
+BREAKING CHANGE: The entire public API has been redesigned"
+```
+
+### Setup Requirements
+
+To enable automated publishing, you need to:
+
+1. Create an npm account if you don't have one
+2. Create an npm access token:
+
+   - Go to npmjs.com and log in
+   - Click on your profile picture → "Access Tokens"
+   - Click "Generate New Token" (select "Automation" type)
+   - Copy the token
+
+3. Add the npm token to your GitHub repository:
+   - Go to your GitHub repository settings
+   - Click on "Secrets and variables" → "Actions"
+   - Click "New repository secret"
+   - Name: `NPM_TOKEN`
+   - Value: Your npm access token
+   - Click "Add secret"
+
+### Development Workflow
+
+1. Write your code and commit using conventional commit messages
+2. Push to the main branch
+3. semantic-release will automatically:
+   - Analyze commit messages
+   - Bump version
+   - Generate changelog
+   - Create GitHub release
+   - Publish to npm
+
+> Note: Only commits to the main branch trigger releases. When working on features, use feature branches and pull requests.
 
 ## Contributing
 
