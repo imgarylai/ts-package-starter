@@ -20,6 +20,7 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 - 🪝 Git hooks with husky
 - 🌲 Tree-shakeable exports
 - 📦 Optimized npm package exports
+- 🤖 Automated dependency updates with Renovate
 
 ## Getting Started
 
@@ -55,7 +56,7 @@ This is an example of how your package could be used once you publish it. Update
 
 ```typescript
 // This is just a placeholder example - replace with your own package's usage
-import { YourFunction } from 'your-package-name';
+import { YourFunction } from "your-package-name";
 
 // Use your package
 const result = YourFunction();
@@ -151,6 +152,18 @@ The project uses tsup for building, which provides:
 - Source maps
 - Tree shaking
 - Minification
+
+## Dependency Management
+
+This project uses [Renovate](https://docs.renovatebot.com/) for automated dependency updates. The configuration includes:
+
+- Automatic merging of minor and patch updates
+- Dependencies are updated every weekend
+- Updates are automatically rebased
+- Non-major dependencies are grouped together
+- Node.js version updates are disabled (managed manually)
+
+The Renovate bot will automatically create pull requests for dependency updates according to this schedule and configuration. This helps keep your dependencies up-to-date while minimizing maintenance overhead.
 
 ## License
 
