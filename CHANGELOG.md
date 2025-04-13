@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/imgarylai/ts-package-starter/compare/v1.0.2...v1.1.0) (2025-04-13)
+
+
+### Features
+
+* increase min node and npm version ([6f9dba5](https://github.com/imgarylai/ts-package-starter/commit/6f9dba552fddd09c49367c72e58f2c9784d464be))
+
 ## [1.0.2](https://github.com/imgarylai/ts-package-starter/compare/v1.0.1...v1.0.2) (2025-04-13)
 
 
