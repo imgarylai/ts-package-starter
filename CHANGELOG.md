@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/imgarylai/ts-package-starter/compare/v1.0.1...v1.0.2) (2025-04-13)
+
+
+### Bug Fixes
+
+* cleanup package-lock.json ([b1c1e65](https://github.com/imgarylai/ts-package-starter/commit/b1c1e65ea2aef285f1abab8d16ba1cff65687af5))
+
 ## [1.0.1](https://github.com/imgarylai/ts-package-starter/compare/v1.0.0...v1.0.1) (2025-04-13)
 
 
