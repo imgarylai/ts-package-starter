@@ -1,6 +1,13 @@
 {
   "name": "@imgarylai/ts-package-starter",
   "version": "1.0.0",
+  "description": "A modern TypeScript package starter template with best practices",
+  "keywords": [
+    "typescript",
+    "starter",
+    "template",
+    "package"
+  ],
   "homepage": "https://github.com/imgarylai/ts-package-starter#readme",
   "bugs": {
     "url": "https://github.com/imgarylai/ts-package-starter/issues"
@@ -11,16 +18,35 @@
   },
   "license": "MIT",
   "author": "Gary Lai <garylai1990@gmail.com>",
-  "main": "dist/index.umd.js",
-  "module": "dist/index.modern.module.js",
-  "source": "src/index.ts",
-  "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.modern.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.modern.mjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
   "scripts": {
     "build": "microbundle",
+    "clean": "rimraf dist",
     "dev": "microbundle watch",
+    "predocs": "rimraf docs",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch",
     "lint": "eslint . --ext .ts",
+    "prepack": "npm run build",
     "prepare": "husky install",
-    "test": "jest"
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "type-check": "tsc --noEmit"
   },
   "config": {
     "commitizen": {
@@ -42,6 +68,7 @@
     "prettier": "3.5.3",
     "sort-package-json": "3.0.0",
     "ts-jest": "29.3.1",
+    "typedoc": "0.28.2",
     "typescript": "5.8.3"
   },
   "engines": {
