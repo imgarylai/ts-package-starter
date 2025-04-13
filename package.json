@@ -1,5 +1,5 @@
 {
-  "name": "@imgarylai/ts-package-starter",
+  "name": "ts-package-starter",
   "version": "1.0.0",
   "description": "A modern TypeScript package starter template with best practices",
   "keywords": [

@@ -3,7 +3,7 @@
  *
  * @example
  * ```typescript
- * import { HelloWorld } from '@imgarylai/ts-package-starter';
+ * import { HelloWorld } from 'ts-package-starter';
  *
  * console.log(HelloWorld()); // Output: "Hello World"
  * ```
