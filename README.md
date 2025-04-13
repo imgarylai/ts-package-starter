@@ -11,13 +11,40 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 - 📦 **Modern Build**: Microbundle for creating modern JavaScript bundles
 - 🔄 **Automated Updates**: Renovate for automated dependency updates
 - 📝 **Conventional Commits**: Commitizen for standardized commit messages
+- 🛡️ **Strict Version Control**: Enforced Node.js and npm version requirements
+
+## Prerequisites
+
+### Required
+
+- Node.js >= 18.0.0 (LTS recommended)
+- npm >= 8.0.0
+
+> **Note**: These version requirements are strictly enforced. The package will not install if your Node.js or npm versions don't meet these requirements.
+
+### Recommended
+
+- Git >= 2.13.0
+- An IDE with TypeScript support (VS Code, WebStorm, etc.)
+
+### Why These Versions?
+
+#### Node.js 18+
+
+- Long Term Support (LTS) status
+- Modern JavaScript features support
+- Built-in fetch API
+- Enhanced security features
+- Better performance
+
+#### npm 8+
+
+- Improved dependency resolution
+- Enhanced security features
+- Workspace support
+- Better peer dependency handling
 
 ## Getting Started
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm (v6 or higher)
 
 ### Installation
 
