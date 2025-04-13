@@ -1,12 +1,18 @@
 {
   "$schema": "https://typedoc.org/schema.json",
-  "entryPoints": ["./src/index.ts"],
+  "entryPoints": ["src/index.ts"],
   "out": "docs",
-  "name": "TypeScript Package Starter",
-  "includeVersion": true,
   "excludePrivate": true,
   "excludeProtected": true,
   "excludeExternals": true,
+  "theme": "default",
+  "name": "ts-package-starter",
   "readme": "README.md",
-  "plugin": ["typedoc-plugin-markdown"]
+  "includeVersion": true,
+  "gitRevision": "main",
+  "searchInComments": true,
+  "validation": {
+    "invalidLink": true,
+    "notExported": true
+  }
 }

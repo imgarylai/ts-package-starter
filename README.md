@@ -22,6 +22,11 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 - 📦 Optimized npm package exports
 - 🤖 Automated dependency updates with Renovate
 
+## Requirements
+
+- Node.js >= 20.0.0
+- npm >= 10.0.0
+
 ## Getting Started
 
 1. Use this template by clicking the "Use this template" button on GitHub
@@ -212,6 +217,69 @@ The project uses tsup for building, which provides:
 - Source maps
 - Tree shaking
 - Minification
+
+## Documentation
+
+This project uses TypeDoc for generating API documentation. The documentation is automatically built and deployed to GitHub Pages on every push to the main branch.
+
+### Local Documentation
+
+To generate documentation locally:
+
+```bash
+# Generate documentation
+npm run docs
+
+# Watch mode for documentation
+npm run docs:watch
+```
+
+The documentation will be generated in the `docs` directory.
+
+### Online Documentation
+
+The documentation is automatically deployed to GitHub Pages at:
+[https://imgarylai.github.io/ts-package-starter](https://imgarylai.github.io/ts-package-starter)
+
+Features of the documentation:
+
+- Full API reference
+- Type information
+- Search functionality
+- Version information
+- Integration with README
+- Examples and usage
+
+### GitHub Pages Setup
+
+To set up GitHub Pages for your documentation:
+
+1. Go to your GitHub repository settings
+2. Navigate to "Pages" under "Code and automation"
+3. Under "Build and deployment":
+   - Source: Select "GitHub Actions"
+   - Branch: Leave as default (gh-pages will be created automatically)
+
+The documentation will be automatically built and deployed when:
+
+- You push to the main branch
+- The GitHub Actions workflow completes successfully
+
+You can also manually trigger the documentation build:
+
+1. Go to the "Actions" tab in your repository
+2. Select the "Documentation" workflow
+3. Click "Run workflow"
+
+### Documentation Configuration
+
+The documentation is configured in `typedoc.json`. Key features:
+
+- Excludes private and protected members
+- Includes version information
+- Validates links and exports
+- Uses the default theme
+- Integrates with the README
 
 ## Dependency Management
 

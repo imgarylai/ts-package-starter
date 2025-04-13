@@ -88,6 +88,7 @@
     "sort-package-json": "3.0.0",
     "ts-jest": "^29.1.2",
     "tsup": "^8.0.2",
+    "typedoc": "^0.28.2",
     "typescript": "5.8.3"
   },
   "engines": {

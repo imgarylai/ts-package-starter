@@ -41,6 +41,9 @@ jobs:
       - name: Test with coverage
         run: npm run test:coverage
 
+      - name: Generate documentation
+        run: npm run docs
+
       - name: Upload code coverage to codecov
         uses: codecov/codecov-action@v5
         with:
