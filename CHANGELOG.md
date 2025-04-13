@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/imgarylai/ts-package-starter/compare/v1.0.0...v1.0.1) (2025-04-13)
+
+
+### Bug Fixes
+
+* **package.json:** remove scope ([f9acce1](https://github.com/imgarylai/ts-package-starter/commit/f9acce16613883d5a35d9fb5ae51e58c8770dee0))
+
 # 1.0.0 (2025-04-13)
 
 
