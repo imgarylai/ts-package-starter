@@ -2,16 +2,25 @@
 
 A modern, well-configured starter template for creating TypeScript npm packages. This template provides a solid foundation with best practices and essential tooling for TypeScript package development.
 
+[![CI](https://github.com/imgarylai/ts-package-starter/actions/workflows/test.yml/badge.svg)](https://github.com/imgarylai/ts-package-starter/actions/workflows/test.yml)
+[![npm version](https://badge.fury.io/js/@imgarylai%2Fts-package-starter.svg)](https://badge.fury.io/js/@imgarylai%2Fts-package-starter)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ## Features
 
-- 📦 **TypeScript Support**: Write your code in TypeScript with proper type checking
-- 🧪 **Testing**: Jest configuration for unit testing
-- 📝 **Code Quality**: ESLint and Prettier for code linting and formatting
-- 🔄 **Git Hooks**: Husky for pre-commit hooks and lint-staged for running linters on staged files
-- 📦 **Modern Build**: Microbundle for creating modern JavaScript bundles
-- 🔄 **Automated Updates**: Renovate for automated dependency updates
-- 📝 **Conventional Commits**: Commitizen for standardized commit messages
-- 🛡️ **Strict Version Control**: Enforced Node.js and npm version requirements
+- 📦 Modern build setup with [tsup](https://github.com/egoist/tsup)
+- 🔥 ESM and CommonJS support
+- 📘 TypeScript with strict mode
+- 🧪 Testing with Jest
+- 📊 Code coverage reporting
+- 📝 API documentation with TypeDoc
+- ✨ Code formatting with Prettier
+- 🚨 Linting with ESLint
+- 🔄 Continuous Integration with GitHub Actions
+- 📋 Conventional commits with commitlint
+- 🪝 Git hooks with husky
+- 🌲 Tree-shakeable exports
+- 📦 Optimized npm package exports
 
 ## Prerequisites
 
@@ -44,37 +53,59 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 - Workspace support
 - Better peer dependency handling
 
-## Getting Started
+## Installation
 
-### Installation
+```bash
+npm install @imgarylai/ts-package-starter
+```
 
-1. Clone this repository:
+## Usage
 
-   ```bash
-   git clone https://github.com/imgarylai/ts-package-starter.git
-   cd ts-package-starter
-   ```
+```typescript
+import { HelloWorld } from '@imgarylai/ts-package-starter';
+
+// Use the package
+const result = HelloWorld();
+console.log(result); // "Hello World!"
+```
+
+## Development
+
+### Setup
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/imgarylai/ts-package-starter.git
+cd ts-package-starter
+```
 
 2. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+```bash
+npm install
+```
 
 3. Start developing:
-   ```bash
-   npm run dev
-   ```
 
-## Available Scripts
+```bash
+npm run dev
+```
 
-- `npm run build` - Build the package using microbundle
+### Available Scripts
+
+- `npm run build` - Build the package with tsup
 - `npm run dev` - Watch mode for development
-- `npm run lint` - Run ESLint
 - `npm test` - Run tests
+- `npm run test:coverage` - Run tests with coverage
+- `npm run lint` - Lint the code
+- `npm run type-check` - Check types
+- `npm run docs` - Generate documentation
+- `npm run docs:watch` - Generate documentation in watch mode
+- `npm run clean` - Clean build outputs
 - `npm run prepare` - Install git hooks
 
-## Project Structure
+### Project Structure
 
 ```
 .
@@ -84,6 +115,8 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 ├── .github/          # GitHub configuration
 ├── .husky/           # Git hooks
 ├── dist/             # Built files (generated)
+├── docs/             # Generated documentation
+├── coverage/         # Test coverage reports
 └── node_modules/     # Dependencies
 ```
 
@@ -104,9 +137,28 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+3. Commit your changes using conventional commits (`git commit -m 'feat: add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+### Commit Convention
+
+This project uses [Conventional Commits](https://www.conventionalcommits.org/). Examples:
+
+- `feat: add new feature`
+- `fix: resolve bug issue`
+- `docs: update README`
+- `chore: update dependencies`
+
+## Building
+
+The project uses tsup for building, which provides:
+
+- Multiple format outputs (ESM, CommonJS)
+- TypeScript declaration files
+- Source maps
+- Tree shaking
+- Minification
 
 ## License
 
@@ -118,10 +170,9 @@ Gary Lai - [@imgarylai](https://github.com/imgarylai)
 
 ## Acknowledgments
 
-- [microbundle](https://github.com/developit/microbundle) for the build tooling
-- [TypeScript](https://www.typescriptlang.org/) for the programming language
+- [tsup](https://github.com/egoist/tsup) for the amazing build tool
+- [TypeScript](https://www.typescriptlang.org/) for the type system
 - [Jest](https://jestjs.io/) for testing
-- [ESLint](https://eslint.org/) for linting
+- [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io/) for code formatting
 - [Husky](https://typicode.github.io/husky/) for git hooks
-- [Renovate](https://renovatebot.com/) for dependency updates
