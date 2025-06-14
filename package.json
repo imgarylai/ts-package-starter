@@ -80,7 +80,7 @@
     "eslint-plugin-jest": "28.13.5",
     "husky": "9.1.7",
     "jest": "^30.0.0",
-    "lint-staged": "16.1.0",
+    "lint-staged": "16.1.1",
     "prettier": "^3.2.5",
     "prettier-package-json": "^2.4.11",
     "rimraf": "^6.0.0",
