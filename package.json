@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "A modern TypeScript package starter template with best practices",
   "keywords": [
-    "typescript",
+    "package",
     "starter",
     "template",
-    "package"
+    "typescript"
   ],
   "homepage": "https://github.com/imgarylai/ts-package-starter#readme",
   "bugs": {
@@ -41,7 +41,7 @@
     "docs:watch": "typedoc --watch",
     "lint": "eslint .",
     "prepack": "npm run build",
-    "prepare": "husky install",
+    "prepare": "husky",
     "test": "jest",
     "test:coverage": "jest --coverage",
     "type-check": "tsc --noEmit"
@@ -49,7 +49,8 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
       "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "jest --bail --findRelatedTests"
     ],
     "*.{json,md}": [
       "prettier --write"

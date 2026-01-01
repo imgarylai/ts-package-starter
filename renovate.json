@@ -1,8 +1,13 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "automerge": true,
   "automergeStrategy": "rebase",
-  "extends": ["config:base"],
+  "extends": ["config:recommended"],
   "schedule": ["every weekend"],
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "schedule": ["at any time"]
+  },
   "packageRules": [
     {
       "groupName": "node",
@@ -14,6 +19,15 @@
       "groupName": "non-major dependencies",
       "automerge": true,
       "schedule": ["every weekend"]
+    },
+    {
+      "description": "Security updates - immediate and auto-merge",
+      "matchDatasources": ["npm"],
+      "matchUpdateTypes": ["patch"],
+      "isVulnerabilityAlert": true,
+      "schedule": ["at any time"],
+      "automerge": true,
+      "prPriority": 10
     }
   ]
 }
