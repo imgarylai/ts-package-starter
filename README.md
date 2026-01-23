@@ -5,6 +5,8 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 [![CI](https://github.com/imgarylai/ts-package-starter/actions/workflows/test.yml/badge.svg)](https://github.com/imgarylai/ts-package-starter/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[繁體中文](README.zh-TW.md)
+
 ## Features
 
 - 📦 Modern build setup with [tsup](https://github.com/egoist/tsup)
@@ -24,7 +26,7 @@ A modern, well-configured starter template for creating TypeScript npm packages.
 
 ## Requirements
 
-- Node.js >= 20.0.0
+- Node.js >= 22.14.0
 - npm >= 10.0.0
 
 ## Getting Started
