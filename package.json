@@ -36,7 +36,7 @@
     "prepare": "husky",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit --project tsconfig.test.json"
   },
   "config": {
     "commitizen": {
@@ -71,7 +71,7 @@
     "ts-jest": "^29.1.2",
     "tsup": "^8.0.2",
     "typedoc": "^0.28.2",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "keywords": [
     "package",
